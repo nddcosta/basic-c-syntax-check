@@ -38,6 +38,8 @@ int is_symbol(char c){
 }
 
 void check_final_symbols(struct Status *status, struct Errors *errors){
-	errors->symbol = !(status->symbol->index == 0);
+	if(!errors->symbol){
+		errors->symbol = !(status->symbol->index == 0);
+	}
 }
 
